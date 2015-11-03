@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import SwiftyJSON
-
+ 
 class PlantViewController:UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
     @IBOutlet weak var mapView: MKMapView!
@@ -27,6 +27,7 @@ class PlantViewController:UIViewController, MKMapViewDelegate, CLLocationManager
         self.mapView.delegate = self;
         self.mapView.showsUserLocation = true;
 
+        
         loadArtworks();
         mapView.addAnnotations(artworks)
     }
@@ -39,15 +40,15 @@ class PlantViewController:UIViewController, MKMapViewDelegate, CLLocationManager
         }
     }
     func loadArtworks(){
-        let fileName = NSBundle.mainBundle().pathForResource("PublicArt", ofType: "json")
+        let fileName = NSBundle.mainBundle().pathForResource("sights", ofType: "json")
 
         do {
             let data :NSData = try NSData(contentsOfFile: fileName!, options: NSDataReadingOptions(rawValue: 0))
             let json = JSON(data:data)
-            let datas = json["data"];
-            for (_,subJson):(String, JSON) in datas {
-               if let artwork = Artwork.fromJSON(subJson.array!){
-                artworks.append(artwork);
+            let sights = json["photos"];
+            for (_,subJson):(String, JSON) in sights {
+                if let sight = SightModel.fromJSON(subJson){
+                     artworks.append(Artwork(model: sight));
                 }
             }
         }catch{
@@ -64,23 +65,34 @@ extension PlantViewController{
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
         if let annotation = annotation as? Artwork{
-            let identifier = "pin";
-            var view:ArtworkAnnotationView
+            let identifier = "sight";
+            var annotationView:ArtworkAnnotationView
             if let dequeueView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? ArtworkAnnotationView{
-                dequeueView.annotation = annotation;
-                view = dequeueView;
+                annotationView = dequeueView;
             }else {
-                view = ArtworkAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                //view.canShowCallout = true
-                //view.calloutOffset = CGPoint(x: -5, y: 5)
-                //view.rightCalloutAccessoryView = UIButton(type:.DetailDisclosure) as UIView
-
+                annotationView = ArtworkAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             }
-            //view.image = UIImage(named: "animatedImageNamed")
 
-            return view
+            annotationView.update(nil);
+
+            return annotationView
         }
         return nil
+    }
+
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        if let annotation = (view as! ArtworkAnnotationView).annotation as? Artwork{
+            let sightModel = annotation.model
+            if let listView = JournalListView.viewFromXib() as? JournalListView {
+                var frame = self.view.bounds;
+                frame.origin.y    = frame.size.height - 400;
+                frame.size.height = 400;
+                listView.frame = frame;
+                listView.translatesAutoresizingMaskIntoConstraints = true
+                self.view.addSubview(listView);
+                listView.proxy.datas = [sightModel, sightModel, sightModel, sightModel,sightModel];
+            }
+        }
     }
 }
 
