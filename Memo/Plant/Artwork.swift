@@ -8,7 +8,6 @@
 
 import MapKit
 import AddressBook
-import SwiftyJSON
 
 
 /** Artwork protocol

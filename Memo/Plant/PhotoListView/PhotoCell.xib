@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="70A-Ef-6LS" customClass="PhotoCell" customModule="Memo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="287"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="244" height="287"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="photo_01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="So0-Sd-lAS">
+                        <rect key="frame" x="0.0" y="0.0" width="244" height="287"/>
+                        <animations/>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstItem="So0-Sd-lAS" firstAttribute="leading" secondItem="70A-Ef-6LS" secondAttribute="leading" id="BQW-5m-uf5"/>
+                <constraint firstItem="So0-Sd-lAS" firstAttribute="top" secondItem="70A-Ef-6LS" secondAttribute="top" id="JAq-OC-qTv"/>
+                <constraint firstAttribute="bottom" secondItem="So0-Sd-lAS" secondAttribute="bottom" id="QR0-WM-YXv"/>
+                <constraint firstAttribute="trailing" secondItem="So0-Sd-lAS" secondAttribute="trailing" id="rdL-XI-sWM"/>
+            </constraints>
+            <size key="customSize" width="244" height="287"/>
+            <point key="canvasLocation" x="112" y="15.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="photo_01.jpg" width="750" height="750"/>
+    </resources>
+</document>

@@ -1,0 +1,4 @@
+DIR=`dirname $0`
+cd $DIR
+rm -rf ./Pods
+pod install --verbose  --no-repo-update

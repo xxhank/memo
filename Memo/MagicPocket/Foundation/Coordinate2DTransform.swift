@@ -7,4 +7,3 @@
 //
 
 import CoreLocation
-import ObjectMapper
