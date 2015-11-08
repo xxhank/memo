@@ -1,5 +1,5 @@
 //
-//  MMTableViewProxy.swift
+//  MMArrayTableViewProxy.swift
 //  Memo
 //
 //  Created by wangchaojs02 on 15/11/1.
@@ -65,6 +65,7 @@ extension MMArrayTableViewProxy:UITableViewDataSource{
             }
             let cellData = datas[indexPath.row];
             self.modifier(tableView: tableView, tableViewCell: cell, cellData: cellData)
+            cell.selectionStyle = .None;
             return cell;
         }
 

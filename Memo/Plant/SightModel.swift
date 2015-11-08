@@ -10,7 +10,6 @@ import CoreLocation
 import ObjectMapper
 import SwiftyJSON
 
-
 class SightModel: Mappable{
     var name:String?
     var count:UInt = 0

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import SwiftyJSON
- 
+
 class PlantViewController:UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
     @IBOutlet weak var mapView: MKMapView!
@@ -82,15 +82,14 @@ extension PlantViewController{
 
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         if let annotation = (view as! ArtworkAnnotationView).annotation as? Artwork{
-            let sightModel = annotation.model
-            if let listView = JournalListView.viewFromXib() as? JournalListView {
+            /// let sightModel = annotation.model
+            if let listView = SightPopupListView.viewFromXib() as? SightPopupListView {
                 var frame = self.view.bounds;
                 frame.origin.y    = frame.size.height - 400;
                 frame.size.height = 400;
                 listView.frame = frame;
                 listView.translatesAutoresizingMaskIntoConstraints = true
                 self.view.addSubview(listView);
-                listView.proxy.datas = [sightModel, sightModel, sightModel, sightModel,sightModel];
             }
         }
     }

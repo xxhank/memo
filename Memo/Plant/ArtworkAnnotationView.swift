@@ -8,7 +8,6 @@
 
 import MapKit
 import Haneke
-import XCGLogger
 
 class ArtworkAnnotationContentView:UIView{
     @IBOutlet weak var imageView: UIImageView!

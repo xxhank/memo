@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SightPopupListView" customModule="Memo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="474"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aD2-98-u3g">
+                    <rect key="frame" x="0.0" y="0.0" width="313" height="29"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.25882352941176473" green="0.29803921568627451" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                    <segments>
+                        <segment title="游记"/>
+                        <segment title="照片"/>
+                        <segment title="旅行者"/>
+                    </segments>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="modeChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="WS1-HU-V5J"/>
+                    </connections>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ftp-na-MrM">
+                    <rect key="frame" x="0.0" y="28" width="313" height="446"/>
+                    <animations/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="CO7-ih-NS4">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ftp-na-MrM" secondAttribute="bottom" id="AVN-2g-gcB"/>
+                <constraint firstAttribute="trailing" secondItem="aD2-98-u3g" secondAttribute="trailing" id="ImB-B5-rou"/>
+                <constraint firstAttribute="trailing" secondItem="Ftp-na-MrM" secondAttribute="trailing" id="Pwq-gd-jyR"/>
+                <constraint firstItem="Ftp-na-MrM" firstAttribute="top" secondItem="aD2-98-u3g" secondAttribute="bottom" id="R9z-TD-TTx"/>
+                <constraint firstItem="aD2-98-u3g" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Z7T-uX-MNO"/>
+                <constraint firstItem="Ftp-na-MrM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lyW-Fm-EA5"/>
+                <constraint firstItem="aD2-98-u3g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xUl-N4-VdQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="Ftp-na-MrM" id="Q0r-Iv-zL0"/>
+                <outlet property="segmentedControl" destination="aD2-98-u3g" id="hyl-AZ-xvv"/>
+            </connections>
+            <point key="canvasLocation" x="285.5" y="85"/>
+        </view>
+    </objects>
+</document>
