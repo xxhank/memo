@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class SightPopupListView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -44,17 +45,37 @@ class SightPopupListView: UIView {
                     }
                 )
  
+    var journalListView:JournalListView?
+    var photoListView:PhotoListView?
+    var touristListView:TouristListView?
 
     override func awakeFromNib() {
         self.collectionView.registerNibName("SightPopupCell", forCellReuseIdentifier: "SightPopupCell")
-        self.proxy.datas = [JournalListView.viewFromXib()
-                            ,PhotoListView.viewFromXib()
-                            ,TouristListView.viewFromXib()];
+        journalListView = JournalListView.viewFromXib() as? JournalListView
+        photoListView = PhotoListView.viewFromXib() as? PhotoListView
+        touristListView = TouristListView.viewFromXib() as? TouristListView
+        self.proxy.datas = [journalListView!
+                            ,photoListView!
+                            ,touristListView!];
     }
     
     @IBAction func modeChanged(sender: AnyObject) {
         let segmentedControl = sender as! UISegmentedControl
         let item = segmentedControl.selectedSegmentIndex
         self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: item, inSection: 0), atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally , animated: true)
+    }
+}
+
+// MARK: signals
+
+extension SightPopupListView{
+    func journalListSelectSignal()->Signal<(NSIndexPath, AnyObject?), NSError>{
+        return (self.journalListView?.selectSignal())!
+    }
+    func photoListSelectSignal()->Signal<(NSIndexPath, AnyObject?), NSError>{
+        return (self.photoListView?.selectSignal())!
+    }
+    func touristListSelectSignal()->Signal<(NSIndexPath, AnyObject?), NSError>{
+        return (self.touristListView?.selectSignal())!
     }
 }

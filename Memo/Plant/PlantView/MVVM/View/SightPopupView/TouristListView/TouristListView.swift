@@ -1,5 +1,5 @@
 //
-//  JournalListView.swift
+//  TouristListView.swift
 //  Memo
 //
 //  Created by wangchaojs02 on 15/11/1.
@@ -7,23 +7,27 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
-class JournalListView: UIView {
+class TouristListView: UIView {
     @IBOutlet weak var tableView: UITableView!
 
     lazy var proxy:MMArrayTableViewProxy = MMArrayTableViewProxy(tableView: self.tableView
                     , identifier: { (tableView, indexPath) -> String in
-                        return "JournalCell";
+                        return "TouristCell";
                     }, builder: { (tableView, indexPath) -> UITableViewCell in
-                        return JournalCell.viewFromXib() as! JournalCell;
+                        return TouristCell.viewFromXib() as! TouristCell;
                     }, modifier: { (tableView, tableViewCell, cellData) -> () in
-                        if let cell = tableViewCell as? JournalCell{
+                        if let cell = tableViewCell as? TouristCell{
 
                         }
                     }
-    )
-
-    override func awakeFromNib() {
-        self.tableView.registerNibName("JournalCell", forCellReuseIdentifier: "JournalCell")
+                )
+    override func awakeFromNib(){
+        self.tableView.registerNibName("TouristCell", forCellReuseIdentifier: "TouristCell")
+    }
+    
+    func selectSignal()->Signal<(NSIndexPath, AnyObject?), NSError>{
+        return self.proxy.selectSignal;
     }
 }

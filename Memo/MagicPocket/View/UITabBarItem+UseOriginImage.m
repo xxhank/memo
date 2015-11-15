@@ -15,13 +15,15 @@
     static dispatch_once_t onceToken;
 
     dispatch_once(&onceToken, ^{
+#if 0
         SEL original = @selector(initWithCoder:);
         Method originalMethod = class_getInstanceMethod(self, original);
 
         SEL swizzled = @selector(mm_initWithCoder:);
         Method swizzledMethod = class_getInstanceMethod(self, swizzled);
 
-        //method_exchangeImplementations(originalMethod, swizzledMethod);
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+#endif
     });
 } /* load */
 
@@ -34,8 +36,9 @@
 
 - (instancetype)mm_initWithCoder:(NSCoder*)aDecoder
 {
-    UITabBarItem* item = [self mm_initWithCoder:aDecoder];
-    item.image = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *item = [self mm_initWithCoder:aDecoder];
+
+    item.image         = [item.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     item.selectedImage = [item.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return item;
 }

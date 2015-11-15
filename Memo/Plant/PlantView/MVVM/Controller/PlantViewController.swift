@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import SwiftyJSON
+import ReactiveCocoa
 
 class PlantViewController:UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
@@ -81,7 +82,7 @@ extension PlantViewController{
     }
 
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        if let annotation = (view as! ArtworkAnnotationView).annotation as? Artwork{
+        if let _ = (view as! ArtworkAnnotationView).annotation as? Artwork{
             /// let sightModel = annotation.model
             if let listView = SightPopupListView.viewFromXib() as? SightPopupListView {
                 var frame = self.view.bounds;
@@ -90,6 +91,19 @@ extension PlantViewController{
                 listView.frame = frame;
                 listView.translatesAutoresizingMaskIntoConstraints = true
                 self.view.addSubview(listView);
+                
+                listView.journalListSelectSignal().observeOn(UIScheduler())
+                    .observeNext({ (indexPath, data) -> () in
+                        self.performSegueWithIdentifier("showJouralViewController", sender: data)
+                })
+                listView.photoListSelectSignal().observeOn(UIScheduler())
+                    .observeNext({ (indexPath, data) -> () in
+                        self.performSegueWithIdentifier("showJouralViewController", sender: data)
+                })
+                listView.touristListSelectSignal().observeOn(UIScheduler())
+                    .observeNext({ (indexPath, data) -> () in
+                        self.performSegueWithIdentifier("showTouristViewController", sender: data)
+                })
             }
         }
     }

@@ -13,11 +13,11 @@ import UIKit
  */
 
 extension UIView {
-    internal class func viewFromXib()->UIView {
+    class func viewFromXib()->UIView {
         return  self.viewFromXib(self.nameOfClass)
     }
 
-    internal class func viewFromXib(xibName:String)->UIView {
+    class func viewFromXib(xibName:String)->UIView {
         return NSBundle.mainBundle().loadNibNamed(xibName, owner: nil, options: nil)[0] as! UIView
     }
 }

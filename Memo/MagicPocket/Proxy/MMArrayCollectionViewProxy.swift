@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 typealias MMCollectionViewCellBuilder = (collectionView: UICollectionView, indexPath:NSIndexPath)->UICollectionViewCell;
 typealias MMCollectionViewCellIdentifier = (collectionView: UICollectionView, indexPath:NSIndexPath)->String;
@@ -49,6 +50,8 @@ class MMArrayCollectionViewProxy: NSObject  {
             self.measurer = measurer
             super.init()
     }
+    
+    let (selectSignal, selectSink) = Signal<(NSIndexPath, AnyObject?), NSError>.pipe();
 }
 
 extension MMArrayCollectionViewProxy:UICollectionViewDataSource{
@@ -88,7 +91,11 @@ extension MMArrayCollectionViewProxy:UICollectionViewDelegateFlowLayout{
 }
 
 extension MMArrayCollectionViewProxy:UICollectionViewDelegate{
-
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let datas = self.datas!
+        let cellData = datas[indexPath.row];
+        selectSink.sendNext((indexPath,cellData))
+    }
 }
 
 
@@ -120,14 +127,8 @@ func MMCollectionViewCellSquareSize(collectionView:UICollectionView, column:Int)
 /**
  计算单页cell的大小,高度为collectionView的高度
  
- ```
- 
- ```
- 
  - Parameter collectionView: cell所属于的view
- 
  - Throws:  无
- 
  - Returns: cell的尺寸
  */
 func MMCollectionViewCellSingleColumnSize(collectionView:UICollectionView) -> CGSize {

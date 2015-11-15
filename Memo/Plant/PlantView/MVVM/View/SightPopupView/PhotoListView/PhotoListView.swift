@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class PhotoListView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,5 +29,9 @@ class PhotoListView: UIView {
  
     override func awakeFromNib() {
         self.collectionView.registerNibName("PhotoCell", forCellReuseIdentifier: "PhotoCell")
+    }
+    
+    func selectSignal()->Signal<(NSIndexPath, AnyObject?), NSError>{
+        return self.proxy.selectSignal;
     }
 }

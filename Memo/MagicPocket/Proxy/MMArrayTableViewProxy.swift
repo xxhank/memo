@@ -8,10 +8,11 @@
 
 import UIKit
 import UITableView_FDTemplateLayoutCell
+import ReactiveCocoa
 
 typealias MMTableViewCellBuilder = (tableView: UITableView, indexPath:NSIndexPath)->UITableViewCell;
 typealias MMTableViewCellIdentifier = (tableView: UITableView, indexPath:NSIndexPath)->String;
-typealias MMTableViewCellModifier = ( tableView: UITableView, tableViewCell:UITableViewCell, cellData :AnyObject)-> ();
+typealias MMTableViewCellModifier = (tableView: UITableView, tableViewCell:UITableViewCell, cellData :AnyObject)-> ();
 
 class MMArrayTableViewProxy: NSObject  {
     var tableView:UITableView?{
@@ -44,6 +45,8 @@ class MMArrayTableViewProxy: NSObject  {
             self.modifier = modifier
             super.init()
     }
+    
+    let (selectSignal, selectSink) = Signal<(NSIndexPath, AnyObject?), NSError>.pipe()
 }
 
 extension MMArrayTableViewProxy:UITableViewDataSource{
@@ -87,5 +90,9 @@ extension MMArrayTableViewProxy:UITableViewDataSource{
 }
 
 extension MMArrayTableViewProxy:UITableViewDelegate{
-
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        let datas = self.datas!
+        let cellData = datas[indexPath.row];
+        self.selectSink.sendNext((indexPath, cellData))
+    }
 }
