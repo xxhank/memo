@@ -18,6 +18,7 @@ pod 'HanekeSwift'
 pod 'SwiftColors' #, :git=>"https://github.com/xxhank/SwiftColors.git"
 # pod 'ExSwift'
 pod 'UITableView+FDTemplateLayoutCell'
+pod 'CircleProgressView', '~> 1.0'
 
 target 'Memo' do
 end

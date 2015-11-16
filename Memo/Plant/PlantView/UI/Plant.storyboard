@@ -219,36 +219,39 @@
                                     <outlet property="delegate" destination="hVi-PN-U1h" id="wrC-Pf-O1M"/>
                                 </connections>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="P7z-K4-VZF" userLabel="Left Panel">
-                                <rect key="frame" x="20" y="493" width="118" height="154"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P7z-K4-VZF" userLabel="Left Panel">
+                                <rect key="frame" x="25" y="441" width="125" height="196"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wmf-zx-VwG">
-                                        <rect key="frame" x="0.0" y="0.0" width="118" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="34"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconbutton_haertring" translatesAutoresizingMaskIntoConstraints="NO" id="DMm-6E-0IZ">
-                                                <rect key="frame" x="0.0" y="1" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="2" width="30" height="30"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="lQ4-AJ-sIp"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="想要去的地方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-7B-4M6">
-                                                <rect key="frame" x="58" y="19" width="60" height="12"/>
+                                                <rect key="frame" x="45" y="22" width="80" height="12"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of2-AN-Kry">
-                                                <rect key="frame" x="58" y="0.0" width="60" height="17"/>
+                                                <rect key="frame" x="45" y="0.0" width="80" height="18"/>
                                                 <animations/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="28">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="个">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                         </attributes>
                                                     </fragment>
@@ -257,47 +260,47 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="b7P-7B-4M6" firstAttribute="top" secondItem="Of2-AN-Kry" secondAttribute="bottom" constant="2" id="42P-Sh-YOj"/>
+                                            <constraint firstItem="b7P-7B-4M6" firstAttribute="top" secondItem="Of2-AN-Kry" secondAttribute="bottom" constant="4" id="42P-Sh-YOj"/>
                                             <constraint firstItem="DMm-6E-0IZ" firstAttribute="centerY" secondItem="Wmf-zx-VwG" secondAttribute="centerY" id="87I-VX-A8G"/>
-                                            <constraint firstItem="b7P-7B-4M6" firstAttribute="leading" secondItem="DMm-6E-0IZ" secondAttribute="trailing" constant="8" id="Hdm-7E-mZ4"/>
+                                            <constraint firstItem="b7P-7B-4M6" firstAttribute="leading" secondItem="DMm-6E-0IZ" secondAttribute="trailing" constant="15" id="Hdm-7E-mZ4"/>
                                             <constraint firstItem="Of2-AN-Kry" firstAttribute="top" secondItem="Wmf-zx-VwG" secondAttribute="top" id="WqH-e2-fUx"/>
                                             <constraint firstAttribute="bottom" secondItem="b7P-7B-4M6" secondAttribute="bottom" id="cKt-BI-c97"/>
                                             <constraint firstAttribute="trailing" secondItem="b7P-7B-4M6" secondAttribute="trailing" id="efS-5u-lFM"/>
                                             <constraint firstAttribute="trailing" secondItem="Of2-AN-Kry" secondAttribute="trailing" id="exT-5R-989"/>
                                             <constraint firstItem="DMm-6E-0IZ" firstAttribute="leading" secondItem="Wmf-zx-VwG" secondAttribute="leading" id="iOW-R0-Nhx"/>
-                                            <constraint firstItem="Of2-AN-Kry" firstAttribute="leading" secondItem="DMm-6E-0IZ" secondAttribute="trailing" constant="8" id="wsQ-jG-LqR"/>
+                                            <constraint firstItem="Of2-AN-Kry" firstAttribute="leading" secondItem="DMm-6E-0IZ" secondAttribute="trailing" constant="15" id="wsQ-jG-LqR"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-FI-AlJ">
-                                        <rect key="frame" x="0.0" y="41" width="118" height="31"/>
+                                        <rect key="frame" x="0.0" y="54" width="125" height="34"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconbutton_flagring" translatesAutoresizingMaskIntoConstraints="NO" id="SBu-kM-62d">
-                                                <rect key="frame" x="0.0" y="1" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="2" width="30" height="30"/>
                                                 <animations/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="走过的城市和地区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdw-5s-LBP">
-                                                <rect key="frame" x="38" y="19" width="80" height="12"/>
+                                                <rect key="frame" x="45" y="22" width="80" height="12"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mng-Vy-690">
-                                                <rect key="frame" x="38" y="0.0" width="80" height="17"/>
+                                                <rect key="frame" x="45" y="0.0" width="80" height="18"/>
                                                 <animations/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="88">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                     <fragment content="个">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -307,47 +310,57 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="mng-Vy-690" secondAttribute="trailing" id="F9U-Yd-qXo"/>
                                             <constraint firstItem="SBu-kM-62d" firstAttribute="leading" secondItem="hqG-FI-AlJ" secondAttribute="leading" id="J5m-O1-UGf"/>
-                                            <constraint firstItem="Bdw-5s-LBP" firstAttribute="leading" secondItem="SBu-kM-62d" secondAttribute="trailing" constant="8" id="Oah-Px-fc7"/>
+                                            <constraint firstItem="Bdw-5s-LBP" firstAttribute="leading" secondItem="SBu-kM-62d" secondAttribute="trailing" constant="15" id="Oah-Px-fc7"/>
                                             <constraint firstItem="mng-Vy-690" firstAttribute="top" secondItem="hqG-FI-AlJ" secondAttribute="top" id="Y7a-Mb-SeK"/>
                                             <constraint firstAttribute="trailing" secondItem="Bdw-5s-LBP" secondAttribute="trailing" id="aEi-vg-z62"/>
-                                            <constraint firstItem="mng-Vy-690" firstAttribute="leading" secondItem="SBu-kM-62d" secondAttribute="trailing" constant="8" id="aog-Q2-3Io"/>
-                                            <constraint firstItem="Bdw-5s-LBP" firstAttribute="top" secondItem="mng-Vy-690" secondAttribute="bottom" constant="2" id="ey9-LZ-t0b"/>
+                                            <constraint firstItem="mng-Vy-690" firstAttribute="leading" secondItem="SBu-kM-62d" secondAttribute="trailing" constant="15" id="aog-Q2-3Io"/>
+                                            <constraint firstItem="Bdw-5s-LBP" firstAttribute="top" secondItem="mng-Vy-690" secondAttribute="bottom" constant="4" id="ey9-LZ-t0b"/>
                                             <constraint firstAttribute="bottom" secondItem="Bdw-5s-LBP" secondAttribute="bottom" id="xhx-BK-6bF"/>
                                             <constraint firstItem="SBu-kM-62d" firstAttribute="centerY" secondItem="hqG-FI-AlJ" secondAttribute="centerY" id="zn6-NU-uTo"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXw-i6-MUx">
-                                        <rect key="frame" x="0.0" y="82" width="118" height="31"/>
+                                        <rect key="frame" x="0.0" y="108" width="125" height="34"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconbutton_Altitudering" translatesAutoresizingMaskIntoConstraints="NO" id="KBo-M2-t2K">
-                                                <rect key="frame" x="0.0" y="1" width="40" height="30"/>
+                                                <rect key="frame" x="0.0" y="2" width="30" height="30"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="D6f-73-f0t"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到过最高的地方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFx-6U-z0E">
-                                                <rect key="frame" x="48" y="19" width="70" height="12"/>
+                                                <rect key="frame" x="45" y="22" width="80" height="12"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuW-Qw-e8u">
-                                                <rect key="frame" x="48" y="0.0" width="70" height="17"/>
+                                                <rect key="frame" x="45" y="0.0" width="80" height="18"/>
                                                 <animations/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="28">
+                                                    <fragment content="海拔">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="个">
+                                                    <fragment content="5,428">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                    <fragment content="米">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -357,46 +370,49 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="KBo-M2-t2K" firstAttribute="leading" secondItem="kXw-i6-MUx" secondAttribute="leading" id="7nH-cc-4CB"/>
                                             <constraint firstAttribute="trailing" secondItem="UuW-Qw-e8u" secondAttribute="trailing" id="BiS-0U-aas"/>
                                             <constraint firstAttribute="trailing" secondItem="AFx-6U-z0E" secondAttribute="trailing" id="L4p-6l-S3b"/>
-                                            <constraint firstItem="AFx-6U-z0E" firstAttribute="top" secondItem="UuW-Qw-e8u" secondAttribute="bottom" constant="2" id="QUF-lm-8WO"/>
-                                            <constraint firstItem="AFx-6U-z0E" firstAttribute="leading" secondItem="KBo-M2-t2K" secondAttribute="trailing" constant="8" id="aId-1X-02d"/>
+                                            <constraint firstItem="AFx-6U-z0E" firstAttribute="top" secondItem="UuW-Qw-e8u" secondAttribute="bottom" constant="4" id="QUF-lm-8WO"/>
+                                            <constraint firstItem="AFx-6U-z0E" firstAttribute="leading" secondItem="KBo-M2-t2K" secondAttribute="trailing" constant="15" id="aId-1X-02d"/>
                                             <constraint firstItem="KBo-M2-t2K" firstAttribute="centerY" secondItem="kXw-i6-MUx" secondAttribute="centerY" id="ceh-aI-Chu"/>
                                             <constraint firstAttribute="bottom" secondItem="AFx-6U-z0E" secondAttribute="bottom" id="fhI-e9-Abd"/>
-                                            <constraint firstItem="UuW-Qw-e8u" firstAttribute="leading" secondItem="KBo-M2-t2K" secondAttribute="trailing" constant="8" id="jMM-1X-Jwd"/>
+                                            <constraint firstItem="UuW-Qw-e8u" firstAttribute="leading" secondItem="KBo-M2-t2K" secondAttribute="trailing" constant="15" id="jMM-1X-Jwd"/>
                                             <constraint firstItem="UuW-Qw-e8u" firstAttribute="top" secondItem="kXw-i6-MUx" secondAttribute="top" id="lFb-JN-Sah"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LXB-7T-NCu">
-                                        <rect key="frame" x="0.0" y="123" width="118" height="31"/>
+                                        <rect key="frame" x="0.0" y="162" width="125" height="34"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iconbutton_dayring" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-zs-2ro">
-                                                <rect key="frame" x="0.0" y="1" width="40" height="30"/>
+                                                <rect key="frame" x="0.0" y="2" width="30" height="30"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="t4s-p1-UwX"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在此星球上旅行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMv-Ix-3VG">
-                                                <rect key="frame" x="48" y="19" width="70" height="12"/>
+                                                <rect key="frame" x="45" y="22" width="80" height="12"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoM-sa-aJM">
-                                                <rect key="frame" x="48" y="0.0" width="70" height="17"/>
+                                                <rect key="frame" x="45" y="0.0" width="80" height="18"/>
                                                 <animations/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="28">
+                                                    <fragment content="268">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="个">
+                                                    <fragment content="天">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                         </attributes>
                                                     </fragment>
@@ -405,13 +421,13 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="AMv-Ix-3VG" secondAttribute="trailing" id="2A2-w5-ML8"/>
-                                            <constraint firstItem="AMv-Ix-3VG" firstAttribute="leading" secondItem="9a1-zs-2ro" secondAttribute="trailing" constant="8" id="6qC-KK-zam"/>
+                                            <constraint firstItem="AMv-Ix-3VG" firstAttribute="leading" secondItem="9a1-zs-2ro" secondAttribute="trailing" constant="15" id="6qC-KK-zam"/>
                                             <constraint firstItem="9a1-zs-2ro" firstAttribute="leading" secondItem="LXB-7T-NCu" secondAttribute="leading" id="7Tv-O6-hF7"/>
-                                            <constraint firstItem="AMv-Ix-3VG" firstAttribute="top" secondItem="NoM-sa-aJM" secondAttribute="bottom" constant="2" id="Bgl-5C-mIS"/>
-                                            <constraint firstItem="NoM-sa-aJM" firstAttribute="leading" secondItem="9a1-zs-2ro" secondAttribute="trailing" constant="8" id="Hxg-AH-Z1a"/>
+                                            <constraint firstItem="AMv-Ix-3VG" firstAttribute="top" secondItem="NoM-sa-aJM" secondAttribute="bottom" constant="4" id="Bgl-5C-mIS"/>
+                                            <constraint firstItem="NoM-sa-aJM" firstAttribute="leading" secondItem="9a1-zs-2ro" secondAttribute="trailing" constant="15" id="Hxg-AH-Z1a"/>
                                             <constraint firstAttribute="trailing" secondItem="NoM-sa-aJM" secondAttribute="trailing" id="Qf2-W0-Jsr"/>
                                             <constraint firstAttribute="bottom" secondItem="AMv-Ix-3VG" secondAttribute="bottom" id="QgW-L7-jHa"/>
                                             <constraint firstItem="9a1-zs-2ro" firstAttribute="centerY" secondItem="LXB-7T-NCu" secondAttribute="centerY" id="VSS-Yn-3Zj"/>
@@ -421,36 +437,38 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-dG-8Gk" userLabel="Right Panel">
-                                <rect key="frame" x="242" y="493" width="113" height="154"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uwb-dG-8Gk" userLabel="Right Panel">
+                                <rect key="frame" x="200" y="433" width="150" height="204"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-QE-kaT" userLabel="Progress View">
-                                        <rect key="frame" x="0.0" y="0.0" width="113" height="113"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUg-QE-kaT" userLabel="Progress View" customClass="CircleProgressView" customModule="CircleProgressView">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ga-kK-Yjz">
-                                                <rect key="frame" x="32" y="41" width="50" height="31"/>
+                                                <rect key="frame" x="25" y="39" width="100" height="73"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="旅行总里数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-Eh-HBt">
-                                                        <rect key="frame" x="0.0" y="19" width="50" height="12"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="走过的线路" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAz-Eh-HBt">
+                                                        <rect key="frame" x="0.0" y="49" width="100" height="24"/>
                                                         <animations/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.36078431370000003" green="0.3921568627" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvF-Qq-zz8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="47"/>
                                                         <animations/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="28">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                    <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="40" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
-                                                            <fragment content="个">
+                                                            <fragment content="条">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="10" name="PingFangSC-Regular"/>
+                                                                    <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="20" name="PingFangSC-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -458,7 +476,7 @@
                                                     </label>
                                                 </subviews>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="fvF-Qq-zz8" firstAttribute="top" secondItem="4ga-kK-Yjz" secondAttribute="top" id="MHl-mz-GQw"/>
                                                     <constraint firstItem="cAz-Eh-HBt" firstAttribute="top" secondItem="fvF-Qq-zz8" secondAttribute="bottom" constant="2" id="TTj-Fp-QzW"/>
@@ -471,41 +489,62 @@
                                             </view>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="4ga-kK-Yjz" firstAttribute="centerX" secondItem="fUg-QE-kaT" secondAttribute="centerX" id="Dzh-DM-ox1"/>
                                             <constraint firstItem="4ga-kK-Yjz" firstAttribute="centerY" secondItem="fUg-QE-kaT" secondAttribute="centerY" id="O6h-dT-36L"/>
-                                            <constraint firstAttribute="height" constant="113" id="aCa-k0-o06"/>
-                                            <constraint firstAttribute="width" constant="113" id="zCN-Gg-LaM"/>
+                                            <constraint firstAttribute="height" constant="150" id="aCa-k0-o06"/>
+                                            <constraint firstAttribute="width" constant="150" id="zCN-Gg-LaM"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="centerFillColor">
+                                                <color key="value" red="0.074509803921568626" green="0.11372549019607843" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                                <color key="value" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="trackFillColor">
+                                                <color key="value" red="0.15294117647058825" green="0.19215686274509805" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gll-P2-Zd3">
-                                        <rect key="frame" x="0.0" y="123" width="113" height="31"/>
+                                        <rect key="frame" x="0.0" y="170" width="150" height="34"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="icon_mileagering" translatesAutoresizingMaskIntoConstraints="NO" id="UP1-Im-hut">
-                                                <rect key="frame" x="0.0" y="1" width="55" height="30"/>
+                                                <rect key="frame" x="0.0" y="2" width="30" height="30"/>
                                                 <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="1wJ-jF-RVp"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="旅行总里数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-u0-aui">
-                                                <rect key="frame" x="63" y="19" width="50" height="12"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="旅行总里程" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-u0-aui">
+                                                <rect key="frame" x="45" y="22" width="105" height="12"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.36078431370000003" green="0.3921568627" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKA-9O-10Q">
-                                                <rect key="frame" x="63" y="0.0" width="50" height="17"/>
+                                                <rect key="frame" x="45" y="0.0" width="105" height="18"/>
                                                 <animations/>
                                                 <attributedString key="attributedText">
-                                                    <fragment content="28">
+                                                    <fragment content="28,822.8">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                            <color key="NSColor" red="0.63529411764705879" green="0.70196078431372544" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="15" name="HelveticaNeue"/>
                                                         </attributes>
                                                     </fragment>
-                                                    <fragment content="个">
+                                                    <fragment content="公里">
                                                         <attributes>
-                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="NSColor" red="0.36078431372549019" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" size="10" name="PingFangSC-Regular"/>
                                                         </attributes>
                                                     </fragment>
@@ -514,37 +553,50 @@
                                             </label>
                                         </subviews>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="wKA-9O-10Q" firstAttribute="leading" secondItem="UP1-Im-hut" secondAttribute="trailing" constant="8" id="3Xw-TJ-POg"/>
+                                            <constraint firstItem="wKA-9O-10Q" firstAttribute="leading" secondItem="UP1-Im-hut" secondAttribute="trailing" constant="15" id="3Xw-TJ-POg"/>
                                             <constraint firstAttribute="trailing" secondItem="wKA-9O-10Q" secondAttribute="trailing" id="4x0-OW-uo2"/>
                                             <constraint firstItem="UP1-Im-hut" firstAttribute="leading" secondItem="gll-P2-Zd3" secondAttribute="leading" id="7fX-01-6w7"/>
                                             <constraint firstItem="UP1-Im-hut" firstAttribute="centerY" secondItem="gll-P2-Zd3" secondAttribute="centerY" id="DCz-WK-jVZ"/>
-                                            <constraint firstItem="6hh-u0-aui" firstAttribute="leading" secondItem="UP1-Im-hut" secondAttribute="trailing" constant="8" id="Kl4-Zc-xhj"/>
+                                            <constraint firstItem="6hh-u0-aui" firstAttribute="leading" secondItem="UP1-Im-hut" secondAttribute="trailing" constant="15" id="Kl4-Zc-xhj"/>
                                             <constraint firstAttribute="bottom" secondItem="6hh-u0-aui" secondAttribute="bottom" id="Mtb-pV-tZe"/>
                                             <constraint firstAttribute="trailing" secondItem="6hh-u0-aui" secondAttribute="trailing" id="Vmv-IZ-V8P"/>
                                             <constraint firstItem="wKA-9O-10Q" firstAttribute="top" secondItem="gll-P2-Zd3" secondAttribute="top" id="i6S-mV-N3Z"/>
-                                            <constraint firstItem="6hh-u0-aui" firstAttribute="top" secondItem="wKA-9O-10Q" secondAttribute="bottom" constant="2" id="vzS-hj-YKh"/>
+                                            <constraint firstItem="6hh-u0-aui" firstAttribute="top" secondItem="wKA-9O-10Q" secondAttribute="bottom" constant="4" id="vzS-hj-YKh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-6N-CLM" userLabel="Map View">
-                                <rect key="frame" x="20" y="129" width="335" height="364"/>
+                                <rect key="frame" x="20" y="152" width="335" height="212"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="map_w" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-Os-69M">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="212"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.15686274510000001" green="0.18039215689999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="UUs-Os-69M" firstAttribute="leading" secondItem="Iy4-6N-CLM" secondAttribute="leading" id="9G3-DL-h3Z"/>
+                                    <constraint firstItem="UUs-Os-69M" firstAttribute="top" secondItem="Iy4-6N-CLM" secondAttribute="top" id="aDN-zn-YFa"/>
+                                    <constraint firstAttribute="trailing" secondItem="UUs-Os-69M" secondAttribute="trailing" id="lG9-gO-Es2"/>
+                                    <constraint firstAttribute="bottom" secondItem="UUs-Os-69M" secondAttribute="bottom" id="vjV-E3-RXj"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-d1-lyh" userLabel="Top Info View">
-                                <rect key="frame" x="0.0" y="95" width="375" height="34"/>
+                                <rect key="frame" x="0.0" y="95" width="375" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ha-xg-QDR">
-                                        <rect key="frame" x="0.0" y="0.0" width="94" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="37"/>
                                         <animations/>
                                         <attributedString key="attributedText">
                                             <fragment content="图片">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="14" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -554,15 +606,15 @@
 Cg
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="68">
+                                            <fragment content="{photoNum}">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -570,12 +622,12 @@ Cg
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdS-WJ-fsS">
-                                        <rect key="frame" x="94" y="0.0" width="94" height="34"/>
+                                        <rect key="frame" x="94" y="0.0" width="94" height="37"/>
                                         <animations/>
                                         <attributedString key="attributedText">
-                                            <fragment content="图片">
+                                            <fragment content="访问">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="14" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -585,14 +637,14 @@ Cg
 Cg
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="17" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="68">
+                                            <fragment content="{vistorNum}">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="12" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -601,12 +653,12 @@ Cg
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2W-Ul-1ev">
-                                        <rect key="frame" x="188" y="0.0" width="93" height="34"/>
+                                        <rect key="frame" x="188" y="0.0" width="93" height="37"/>
                                         <animations/>
                                         <attributedString key="attributedText">
-                                            <fragment content="图片">
+                                            <fragment content="关注">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="14" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -616,14 +668,14 @@ Cg
 Cg
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="17" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="68">
+                                            <fragment content="{followNum}">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="12" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -632,12 +684,12 @@ Cg
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBg-vz-UfR">
-                                        <rect key="frame" x="281" y="0.0" width="94" height="34"/>
+                                        <rect key="frame" x="281" y="0.0" width="94" height="37"/>
                                         <animations/>
                                         <attributedString key="attributedText">
-                                            <fragment content="图片">
+                                            <fragment content="粉丝">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="14" name="PingFangSC-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -647,14 +699,14 @@ Cg
 Cg
 </string>
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="68">
+                                            <fragment content="{fansNum}">
                                                 <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="NSColor" red="0.63529411764705879" green="0.69803921568627447" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="12" name="HelveticaNeue"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
@@ -665,31 +717,44 @@ Cg
                                 </subviews>
                                 <animations/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北美洲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQf-fQ-p8d">
+                                <rect key="frame" x="40" y="385" width="69" height="28"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.45490196078431372" green="0.49803921568627452" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.1803921568627451" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.074509803921568626" green="0.11372549019607843" blue="0.15294117647058825" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tno-Fu-srA" secondAttribute="trailing" id="0Lq-Ga-gmc"/>
-                            <constraint firstItem="ezj-DV-7ss" firstAttribute="top" secondItem="uwb-dG-8Gk" secondAttribute="bottom" constant="20" id="19M-o9-cST"/>
-                            <constraint firstItem="P7z-K4-VZF" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" constant="20" id="7Gp-7M-rP2"/>
+                            <constraint firstItem="ezj-DV-7ss" firstAttribute="top" secondItem="uwb-dG-8Gk" secondAttribute="bottom" constant="30" id="19M-o9-cST"/>
+                            <constraint firstItem="P7z-K4-VZF" firstAttribute="top" secondItem="MQf-fQ-p8d" secondAttribute="bottom" constant="27.5" id="4Yf-e7-Cxq"/>
+                            <constraint firstItem="P7z-K4-VZF" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" constant="25" id="7Gp-7M-rP2"/>
                             <constraint firstItem="MV3-d1-lyh" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" id="BEp-P3-ALc"/>
-                            <constraint firstItem="uwb-dG-8Gk" firstAttribute="top" secondItem="Iy4-6N-CLM" secondAttribute="bottom" id="JB7-q8-Knx"/>
+                            <constraint firstItem="uwb-dG-8Gk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iy4-6N-CLM" secondAttribute="bottom" constant="20" id="JB7-q8-Knx"/>
                             <constraint firstAttribute="trailing" secondItem="MV3-d1-lyh" secondAttribute="trailing" id="OSG-dD-0bh"/>
                             <constraint firstItem="Tno-Fu-srA" firstAttribute="top" secondItem="pHq-vg-7TG" secondAttribute="topMargin" id="Vkh-6f-YUT"/>
                             <constraint firstItem="MV3-d1-lyh" firstAttribute="top" secondItem="Tno-Fu-srA" secondAttribute="bottom" id="WnY-ia-gX5"/>
                             <constraint firstItem="Tno-Fu-srA" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" id="Zhg-G5-U5B"/>
-                            <constraint firstAttribute="trailing" secondItem="uwb-dG-8Gk" secondAttribute="trailing" constant="20" id="c4B-63-IRW"/>
-                            <constraint firstItem="ezj-DV-7ss" firstAttribute="top" secondItem="P7z-K4-VZF" secondAttribute="bottom" constant="20" id="cZg-7L-pdN"/>
+                            <constraint firstAttribute="trailing" secondItem="uwb-dG-8Gk" secondAttribute="trailing" constant="25" id="c4B-63-IRW"/>
+                            <constraint firstItem="ezj-DV-7ss" firstAttribute="top" secondItem="P7z-K4-VZF" secondAttribute="bottom" constant="30" id="cZg-7L-pdN"/>
                             <constraint firstItem="Tno-Fu-srA" firstAttribute="top" secondItem="Uf0-mW-cAV" secondAttribute="bottom" id="ca4-hP-NUt"/>
+                            <constraint firstAttribute="bottom" secondItem="uwb-dG-8Gk" secondAttribute="bottom" constant="30" id="dFR-5k-84e"/>
                             <constraint firstItem="Tno-Fu-srA" firstAttribute="top" secondItem="pHq-vg-7TG" secondAttribute="top" id="fZh-RM-ROK"/>
                             <constraint firstAttribute="trailing" secondItem="Iy4-6N-CLM" secondAttribute="trailing" constant="20" id="ldk-ya-RYM"/>
                             <constraint firstItem="Iy4-6N-CLM" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" constant="20" id="qXk-UF-zu6"/>
-                            <constraint firstItem="Iy4-6N-CLM" firstAttribute="top" secondItem="MV3-d1-lyh" secondAttribute="bottom" id="zPr-O0-dca"/>
+                            <constraint firstItem="MQf-fQ-p8d" firstAttribute="leading" secondItem="pHq-vg-7TG" secondAttribute="leading" constant="40" id="r3F-Xc-Hc7"/>
+                            <constraint firstAttribute="bottom" secondItem="P7z-K4-VZF" secondAttribute="bottom" constant="30" id="rQp-kI-Smd"/>
+                            <constraint firstItem="Iy4-6N-CLM" firstAttribute="top" secondItem="MV3-d1-lyh" secondAttribute="bottom" constant="20" id="zPr-O0-dca"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Vkh-6f-YUT"/>
                                 <exclude reference="ca4-hP-NUt"/>
+                                <exclude reference="19M-o9-cST"/>
+                                <exclude reference="cZg-7L-pdN"/>
                             </mask>
                         </variation>
                     </view>
@@ -709,6 +774,7 @@ Cg
         <image name="iconbutton_flagring" width="30" height="30"/>
         <image name="iconbutton_haertring" width="30" height="30"/>
         <image name="iconbutton_search" width="29" height="29"/>
+        <image name="map_w" width="365" height="212"/>
         <image name="photo_07.jpg" width="750" height="750"/>
     </resources>
 </document>

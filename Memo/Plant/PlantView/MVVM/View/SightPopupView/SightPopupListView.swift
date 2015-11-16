@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveCocoa
+import SwiftColors
 
 class SightPopupListView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -57,6 +58,28 @@ class SightPopupListView: UIView {
         self.proxy.datas = [journalListView!
                             ,photoListView!
                             ,touristListView!];
+        
+        //self.segmentedControl.layer.borderWidth = 0;
+        //self.segmentedControl.layer.borderColor = UIColor.clearColor().CGColor;
+        
+        let barMetrics: UIBarMetrics = .Default
+        
+       // self.segmentedControl.layer.cornerRadius = 0;
+        let clearImage:UIImage = UIImage();
+        self.segmentedControl.setDividerImage( clearImage, forLeftSegmentState: .Normal, rightSegmentState: .Selected, barMetrics: barMetrics)
+        self.segmentedControl.setDividerImage( clearImage, forLeftSegmentState: .Selected, rightSegmentState: .Normal, barMetrics: barMetrics)
+        self.segmentedControl.setDividerImage( clearImage, forLeftSegmentState: .Normal, rightSegmentState: .Normal, barMetrics: barMetrics)
+        
+        let backgroundImageSize = CGSize(width: 10, height: 10)
+        let backgroundImage = UIImage(color: UIColor(hex: 0x424b54)!, size: backgroundImageSize).resizableImageWithCapInsets(UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1))
+        self.segmentedControl.setBackgroundImage(backgroundImage, forState: .Normal, barMetrics: barMetrics)
+        
+        let selectBackgroundImage = UIImage(color: UIColor(hex: 0x27313b)!, size: backgroundImageSize).resizableImageWithCapInsets(UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1))
+        self.segmentedControl.setBackgroundImage(selectBackgroundImage, forState: .Selected, barMetrics: barMetrics)
+        let attributs:[String:AnyObject] = [NSFontAttributeName:UIFont.systemFontOfSize(16)
+                                        , NSForegroundColorAttributeName:UIColor(hex: 0xDAE2E9)!]
+        self.segmentedControl.setTitleTextAttributes(attributs, forState: .Normal)
+        self.segmentedControl.setTitleTextAttributes(attributs, forState: .Selected)
     }
     
     @IBAction func modeChanged(sender: AnyObject) {

@@ -18,6 +18,7 @@
 		5217F1E91BE046E80019F5A4 /* home.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5217F1E21BE046E80019F5A4 /* home.gpx */; };
 		5217F1EA1BE046E80019F5A4 /* test-location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 5217F1E31BE046E80019F5A4 /* test-location.gpx */; };
 		5217F1F61BE0495F0019F5A4 /* MPLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217F1F51BE0495F0019F5A4 /* MPLabel.swift */; };
+		52363FDC1BFA2A79006323F0 /* UIImage+AF+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52363FDB1BFA2A79006323F0 /* UIImage+AF+Extension.swift */; };
 		5239DACA1BE5E242005AF1C1 /* UITabBarItem+UseOriginImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239DAC91BE5E242005AF1C1 /* UITabBarItem+UseOriginImage.m */; };
 		5239DACE1BE5E6A2005AF1C1 /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5239DACD1BE5E6A2005AF1C1 /* MMTabBarController.m */; };
 		5239DAD01BE5EA7C005AF1C1 /* MMTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239DACF1BE5EA7C005AF1C1 /* MMTabBarItem.swift */; };
@@ -118,6 +119,7 @@
 		5217F1E21BE046E80019F5A4 /* home.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = home.gpx; sourceTree = "<group>"; };
 		5217F1E31BE046E80019F5A4 /* test-location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "test-location.gpx"; sourceTree = "<group>"; };
 		5217F1F51BE0495F0019F5A4 /* MPLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPLabel.swift; sourceTree = "<group>"; };
+		52363FDB1BFA2A79006323F0 /* UIImage+AF+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AF+Extension.swift"; sourceTree = "<group>"; };
 		5239DAC81BE5E242005AF1C1 /* UITabBarItem+UseOriginImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+UseOriginImage.h"; sourceTree = "<group>"; };
 		5239DAC91BE5E242005AF1C1 /* UITabBarItem+UseOriginImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+UseOriginImage.m"; sourceTree = "<group>"; };
 		5239DACB1BE5E509005AF1C1 /* Memo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Memo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -345,9 +347,18 @@
 			name = "sub-module";
 			sourceTree = "<group>";
 		};
+		52363FDA1BFA2A79006323F0 /* UIImage+AF+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				52363FDB1BFA2A79006323F0 /* UIImage+AF+Extension.swift */,
+			);
+			path = "UIImage+AF+Extension";
+			sourceTree = "<group>";
+		};
 		5239DAD31BE5F28E005AF1C1 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				52363FDA1BFA2A79006323F0 /* UIImage+AF+Extension */,
 				5217F1D91BE046520019F5A4 /* MagicPocket */,
 				5239DAD41BE5F28E005AF1C1 /* FDStackView */,
 			);
@@ -962,6 +973,7 @@
 				5239DAE91BE5F28E005AF1C1 /* FDLayoutSpacer.m in Sources */,
 				5239DAFB1BE6137D005AF1C1 /* NSObject+ClassName.swift in Sources */,
 				529E2C8B1BF886E200584DB1 /* MMArrayCollectionViewProxy.swift in Sources */,
+				52363FDC1BFA2A79006323F0 /* UIImage+AF+Extension.swift in Sources */,
 				529E2C8C1BF886E200584DB1 /* MMArrayTableViewProxy.swift in Sources */,
 				52BABEC11BF88E6D007CAD6C /* TouristCell.swift in Sources */,
 				5239DAD01BE5EA7C005AF1C1 /* MMTabBarItem.swift in Sources */,
