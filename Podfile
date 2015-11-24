@@ -17,6 +17,7 @@ pod 'HanekeSwift'
 # pod 'SDWebImage'
 pod 'SwiftColors' #, :git=>"https://github.com/xxhank/SwiftColors.git"
 # pod 'ExSwift'
+pod 'TagListView'
 pod 'UITableView+FDTemplateLayoutCell'
 pod 'CircleProgressView', '~> 1.0'
 

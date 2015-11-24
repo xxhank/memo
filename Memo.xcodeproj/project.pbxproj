@@ -52,6 +52,8 @@
 		523E9CAC1BDE68E5007726D8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523E9CA71BDE68E5007726D8 /* Profile.storyboard */; };
 		523E9CAE1BDE68E5007726D8 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523E9CAB1BDE68E5007726D8 /* Camera.storyboard */; };
 		523E9CB21BDE6A1D007726D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523E9CB11BDE6A1D007726D8 /* MapKit.framework */; };
+		525D3E781C05221000345044 /* TouristHeaderLargeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525D3E771C05221000345044 /* TouristHeaderLargeView.xib */; };
+		525D3E7A1C05242400345044 /* TouristHeaderLargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525D3E791C05242400345044 /* TouristHeaderLargeView.swift */; };
 		529E2C8B1BF886E200584DB1 /* MMArrayCollectionViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529E2C891BF886E200584DB1 /* MMArrayCollectionViewProxy.swift */; };
 		529E2C8C1BF886E200584DB1 /* MMArrayTableViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529E2C8A1BF886E200584DB1 /* MMArrayTableViewProxy.swift */; };
 		52BABEAE1BF88E6D007CAD6C /* PlantInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BABE871BF88E6D007CAD6C /* PlantInterface.swift */; };
@@ -170,6 +172,8 @@
 		523E9CA71BDE68E5007726D8 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		523E9CAB1BDE68E5007726D8 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		523E9CB11BDE6A1D007726D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		525D3E771C05221000345044 /* TouristHeaderLargeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouristHeaderLargeView.xib; sourceTree = "<group>"; };
+		525D3E791C05242400345044 /* TouristHeaderLargeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouristHeaderLargeView.swift; sourceTree = "<group>"; };
 		529E2C891BF886E200584DB1 /* MMArrayCollectionViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMArrayCollectionViewProxy.swift; sourceTree = "<group>"; };
 		529E2C8A1BF886E200584DB1 /* MMArrayTableViewProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMArrayTableViewProxy.swift; sourceTree = "<group>"; };
 		52BABE871BF88E6D007CAD6C /* PlantInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantInterface.swift; sourceTree = "<group>"; };
@@ -569,6 +573,8 @@
 				52BABE921BF88E6D007CAD6C /* SightPopupView */,
 				52179C971BF8C50400D930CE /* TouristHeaderView.xib */,
 				52179C991BF8C61B00D930CE /* TouristHeaderView.swift */,
+				525D3E791C05242400345044 /* TouristHeaderLargeView.swift */,
+				525D3E771C05221000345044 /* TouristHeaderLargeView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -934,6 +940,7 @@
 				5239DB0D1BE6FB72005AF1C1 /* photo_01.jpg in Resources */,
 				52BABEBA1BF88E6D007CAD6C /* PhotoCell.xib in Resources */,
 				5239DB111BE6FB72005AF1C1 /* photo_05.jpg in Resources */,
+				525D3E781C05221000345044 /* TouristHeaderLargeView.xib in Resources */,
 				5239DB141BE6FB72005AF1C1 /* photo_08.jpg in Resources */,
 				52BABEC21BF88E6D007CAD6C /* TouristCell.xib in Resources */,
 				5217F1E71BE046E80019F5A4 /* Main.storyboard in Resources */,
@@ -992,6 +999,7 @@
 				5239DAFD1BE614C3005AF1C1 /* UIView+Factory.swift in Sources */,
 				5239DAEE1BE5F28E005AF1C1 /* FDStackViewLayoutArrangement.m in Sources */,
 				52C635A01BE5D05F00499819 /* Number+Random.swift in Sources */,
+				525D3E7A1C05242400345044 /* TouristHeaderLargeView.swift in Sources */,
 				5239DAEF1BE5F28E005AF1C1 /* FDTransformLayer.m in Sources */,
 				5239DAED1BE5F28E005AF1C1 /* FDStackViewExtensions.m in Sources */,
 				52179C9C1BF8C71900D930CE /* MPXIBView.swift in Sources */,

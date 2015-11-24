@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0cn-Cg-PSk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0cn-Cg-PSk">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -27,7 +27,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad0-9X-8Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842.5" y="-12.5"/>
+            <point key="canvasLocation" x="842" y="-13"/>
         </scene>
         <!--Plant View Controller-->
         <scene sceneID="qEE-Os-8fh">
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6Z-dj-CpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354.5" y="-12.5"/>
+            <point key="canvasLocation" x="1354" y="-13"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="K7F-qj-XzF">
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNN-cS-7Dk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955.5" y="-12.5"/>
+            <point key="canvasLocation" x="1955" y="-13"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="ClB-yS-De1">
@@ -194,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rop-gS-aC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955.5" y="833.5"/>
+            <point key="canvasLocation" x="1955" y="833"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="NNx-cb-OT8">
@@ -208,12 +208,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-Fu-srA" customClass="TouristHeaderView" customModule="Memo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-Fu-srA" customClass="TouristHeaderLargeView" customModule="Memo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.23137254900000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="95" placeholder="YES" id="I0s-2W-zQ9"/>
+                                    <constraint firstAttribute="height" constant="80" id="I0s-2W-zQ9"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="hVi-PN-U1h" id="wrC-Pf-O1M"/>
@@ -570,7 +570,7 @@
                                 <animations/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iy4-6N-CLM" userLabel="Map View">
-                                <rect key="frame" x="20" y="152" width="335" height="212"/>
+                                <rect key="frame" x="20" y="137" width="335" height="212"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="map_w" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-Os-69M">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="212"/>
@@ -588,7 +588,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-d1-lyh" userLabel="Top Info View">
-                                <rect key="frame" x="0.0" y="95" width="375" height="37"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ha-xg-QDR">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="37"/>
@@ -762,7 +762,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0JO-8U-01Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422.5" y="833.5"/>
+            <point key="canvasLocation" x="2422" y="833"/>
         </scene>
     </scenes>
     <resources>
